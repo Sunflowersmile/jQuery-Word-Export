@@ -7,7 +7,7 @@ if (typeof jQuery !== 'undefined' && typeof saveAs !== 'undefined' && typeof htm
         toImgExpr: '[data-image="true"]', // 需要转成img的元素表达式
         styles: '', // 文档样式
         pageStyles: '{size:595.3pt 841.9pt;margin:36.0pt 36.0pt 36.0pt 36.0pt;mso-header-margin:42.55pt;mso-footer-margin:49.6pt;mso-paper-source:0;}', // 页面样式，页边距之类的
-        maxWidth: 624 // 图片最大宽度
+        maxWidth: 700 // 图片最大宽度
       };
       options = $.extend(defaultOptions, options);
       var static = {
@@ -27,7 +27,6 @@ if (typeof jQuery !== 'undefined' && typeof saveAs !== 'undefined' && typeof htm
       });
 
       // Remove hidden elements from the output
-      markup.find(':hidden').remove();
       markup.find(options.hiddenExpr).remove();
 
       var toImg = $(this).find(options.toImgExpr);
